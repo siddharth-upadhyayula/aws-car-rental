@@ -5,9 +5,12 @@
  **************************************************************************/
 
 import React from "react";
+import { RentalCar } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps } from "@aws-amplify/ui-react";
 export declare type ActionCardProps = React.PropsWithChildren<Partial<FlexProps> & {
+    rentalCar?: RentalCar;
+} & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
 export default function ActionCard(props: ActionCardProps): React.ReactElement;

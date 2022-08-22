@@ -5,12 +5,16 @@
  **************************************************************************/
 
 import React from "react";
-import { RentalCar } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { FlexProps } from "@aws-amplify/ui-react";
-export declare type CarRentalCardProps = React.PropsWithChildren<Partial<FlexProps> & {
-    rentalCar?: RentalCar;
+import { CarRentalCardProps } from "./CarRentalCard";
+import { CollectionProps } from "@aws-amplify/ui-react";
+export declare type NewCarsCollectionProps = React.PropsWithChildren<Partial<CollectionProps<any>> & {
+    items?: any[];
+    overrideItems?: (collectionItem: {
+        item: any;
+        index: number;
+    }) => CarRentalCardProps;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function CarRentalCard(props: CarRentalCardProps): React.ReactElement;
+export default function NewCarsCollection(props: NewCarsCollectionProps): React.ReactElement;

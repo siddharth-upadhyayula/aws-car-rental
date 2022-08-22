@@ -6,6 +6,7 @@
 
 export { default as Ampligram } from "./Ampligram";
 export { default as ActionCard } from "./ActionCard";
+export { default as NewCarsCollection } from "./NewCarsCollection";
 export { default as Features2x2 } from "./Features2x2";
 export { default as ProductDetail } from "./ProductDetail";
 export { default as FormCheckout } from "./FormCheckout";
