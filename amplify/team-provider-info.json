@@ -10,6 +10,11 @@
       "StackName": "amplify-carrentalapp-staging-150356",
       "StackId": "arn:aws:cloudformation:us-east-1:339683510260:stack/amplify-carrentalapp-staging-150356/7b0218c0-2162-11ed-aedd-12a6ffeb9497",
       "AmplifyAppId": "d16h6x15qfziw0"
+    },
+    "categories": {
+      "auth": {
+        "carrentalapp": {}
+      }
     }
   }
 }
