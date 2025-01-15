@@ -1,13 +1,9 @@
-Below is the generated documentation for the siddharth-upadhyayula-aws-car-rental repository:
-
-AWS Car Rental Application Documentation
-
 Overview
 
 This repository contains the codebase for an AWS-based car rental application, leveraging Amplify, React, and GraphQL to create a fully functional platform for managing car rentals. The repository is structured to ensure modularity, scalability, and ease of use.
 
 Project Structure
-
+```
 Root Level
 	•	README.md: Documentation for understanding the project, setup, and usage.
 	•	package.json: Node.js package metadata, dependencies, and scripts.
@@ -90,7 +86,7 @@ Each component has a .jsx implementation and an accompanying .d.ts TypeScript de
 	•	TallCard: Vertical card component.
 	•	index.js: Entry point for the UI components.
 	•	studioTheme.js / studioTheme.js.d.ts: Theme configuration for styling.
-
+```
 How to Use
 1.	Clone the Repository:
 ```
