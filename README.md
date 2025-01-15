@@ -1,70 +1,144 @@
-# Getting Started with Create React App
+Below is the generated documentation for the siddharth-upadhyayula-aws-car-rental repository:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+AWS Car Rental Application Documentation
 
-## Available Scripts
+Overview
 
-In the project directory, you can run:
+This repository contains the codebase for an AWS-based car rental application, leveraging Amplify, React, and GraphQL to create a fully functional platform for managing car rentals. The repository is structured to ensure modularity, scalability, and ease of use.
 
-### `npm start`
+Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Root Level
+	•	README.md: Documentation for understanding the project, setup, and usage.
+	•	package.json: Node.js package metadata, dependencies, and scripts.
+	•	.eslintignore: List of files/directories ignored by ESLint.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Amplify Directory (amplify/)
 
-### `npm test`
+Contains AWS Amplify configurations and resources for backend services.
+	•	cli.json: CLI configuration for the Amplify project.
+	•	team-provider-info.json: Environment-specific configuration for Amplify.
+	•	backend/:
+	•	backend-config.json: Backend service configuration.
+	•	tags.json: Tags for AWS resources.
+	•	api/carrentalapp/:
+	•	cli-inputs.json: CLI inputs for the GraphQL API.
+	•	parameters.json: Configuration parameters for the API.
+	•	schema.graphql: Defines the data model for the GraphQL API.
+	•	transform.conf.json: Amplify transformation settings.
+	•	resolvers/: Custom resolvers for API endpoints.
+	•	stacks/CustomResources.json: Custom resources for the API stack.
+	•	auth/carrentalapp/:
+	•	cli-inputs.json: Configuration for the authentication service.
+	•	types/:
+	•	amplify-dependent-resources-ref.d.ts: TypeScript definitions for dependent resources.
+	•	.config/project-config.json: General configuration for the Amplify project.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Public Directory (public/)
 
-### `npm run build`
+Contains static assets and metadata for the application.
+	•	index.html: Main HTML file for the React application.
+	•	manifest.json: Metadata for Progressive Web App (PWA) functionality.
+	•	robots.txt: Directives for search engine crawlers.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Source Directory (src/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Contains the React application source code.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Main Files
+	•	App.css: Styles for the main app component.
+	•	App.js: Entry point for the React application.
+	•	App.test.js: Test cases for the main app component.
+	•	index.css: Global styles.
+	•	index.js: Entry point for rendering the React app.
+	•	reportWebVitals.js: Web vitals measurement for performance tracking.
+	•	setupTests.js: Test setup for the React application.
 
-### `npm run eject`
+Models Directory (models/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Handles application data models.
+	•	index.d.ts / index.js: TypeScript and JavaScript index for models.
+	•	schema.d.ts / schema.js: TypeScript and JavaScript schema for data models.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+UI Components Directory (ui-components/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Pre-designed React components for the application UI.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Each component has a .jsx implementation and an accompanying .d.ts TypeScript definition.
+	•	ActionCard: Displays actions users can take.
+	•	AddCar: UI for adding a new car to the system.
+	•	Ampligram: Social post-style component.
+	•	CarRentalCard: Displays details of a car rental.
+	•	CommentCard: Card for user comments.
+	•	ContactUs: Contact form component.
+	•	FAQItem: Displays FAQ items.
+	•	Features2x2, Features2x3, Features4x1, FeaturesText2x2: Layout components for features.
+	•	FormCheckout: Form for checkout functionality.
+	•	HeroLayout1, HeroLayout2, HeroLayout3, HeroLayout4: Hero section layouts.
+	•	ItemCard: General-purpose card for items.
+	•	MarketingFooter: Footer with marketing information.
+	•	MarketingPricing: Component for displaying pricing.
+	•	MyIcon: Custom icon component.
+	•	NavBar: Navigation bar for the application.
+	•	NewCarsCollection: Component displaying new cars collection.
+	•	ProductCard: Displays product information.
+	•	ProductDetail: Displays detailed product information.
+	•	ProfileCard: User profile card.
+	•	ReviewCard: Review display card.
+	•	SideBar: Sidebar for navigation or options.
+	•	SocialPost: Social media-style post component.
+	•	TallCard: Vertical card component.
+	•	index.js: Entry point for the UI components.
+	•	studioTheme.js / studioTheme.js.d.ts: Theme configuration for styling.
 
-## Learn More
+How to Use
+1.	Clone the Repository:
+```
+git clone https://github.com/siddharth-upadhyayula/aws-car-rental.git
+cd siddharth-upadhyayula-aws-car-rental
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2.	Install Dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+npm install
+```
 
-### Code Splitting
+3.	Run the Application:
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4.	Amplify Setup:
+•	Install Amplify CLI:
+```
+npm install -g @aws-amplify/cli
+```
 
-### Analyzing the Bundle Size
+•	Configure Amplify:
+```
+amplify configure
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+•	Deploy Backend:
+```
+amplify push
+```
 
-### Making a Progressive Web App
+5.	Build for Production:
+```
+npm run build
+```
+Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributions are welcome! Please follow these steps:
+	1.	Fork the repository.
+	2.	Create a new branch.
+	3.	Commit your changes.
+	4.	Submit a pull request.
 
-### Advanced Configuration
+License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project is licensed under MIT License.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This documentation provides an overview, structure, and setup instructions for the repository, ensuring ease of understanding and usability for contributors and users.
